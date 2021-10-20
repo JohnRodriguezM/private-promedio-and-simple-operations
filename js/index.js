@@ -18,37 +18,42 @@ let numeros = [];
 
     function operacion (){
 
-
-        numeros.push(Number(primerValor.value))
-        numeros.push(Number(segundoValor.value))
-        numeros.push(Number(tercerValor.value))
+        primerValor.value < 1? null : numeros.push(Number(primerValor.value))
+        
+        
+        if(tercerValor.value > 1 && segundoValor.value >1){
+            numeros.push(Number(segundoValor.value))
+            numeros.push(Number(tercerValor.value))
+        }
+        
         let contador = 0;
         
         for(i = 0; i < numeros.length; i++){
         
-        
         contador += numeros[i]
-        
         }
         
         let result = contador / numeros.length;
         alert( "tu promedio es " + result);
-        numeros.splice(0);
+        numeros.splice(0)
+       
+            let primerValorPorcentaje = Number((primerValor.value * Number(primerPorcenjate.value) / 100 ))
 
+            primerPorcenjate.value < 10?  null : alert("el porcentaje de tu valor uno es de " + primerValorPorcentaje)
+            
+            let segundoValorPorcentaje = Number((segundoValor.value * Number(segundoPorcentaje.value) / 100 ))
+            
+            segundoPorcentaje.value < 10 ? null :  alert("El porcentaje de tu segundo valor es " + segundoValorPorcentaje)
 
-        let primerValorPorcentaje = Number((primerValor.value * Number(primerPorcenjate.value) / 100 ))
-        alert("el porcentaje de tu valor uno es de " + primerValorPorcentaje)
-        let segundoValorPorcentaje = Number((segundoValor.value * Number(primerPorcenjate.value) / 100 ))
-        alert("el porcentaje de tu valor dos es de " + segundoValorPorcentaje)
-        let tercerValorPorcentaje = Number((tercerValor.value) * Number(tercerPorcentaje.value) / 100);
-        alert("El porcentaje de tu tercer valor es " + tercerValorPorcentaje)
+            let tercerValorPorcentaje = Number((tercerValor.value) * Number(tercerPorcentaje.value) / 100);
 
-
+            tercerPorcentaje.value < 10 ? null :  alert("El porcentaje de tu tercer valor es " + tercerValorPorcentaje)
 
         let notaFinal = Number(primerValorPorcentaje) + Number(segundoValorPorcentaje) + Number(tercerValorPorcentaje);
-        alert("tu nota final es de " + notaFinal);
 
-        if(notaFinal < 30){
+        notaFinal > .5 ? alert("tu nota final es de " + notaFinal) : null
+
+        if(notaFinal < 30 && notaFinal >= 1){
             alert("no vas pasando la materia, te falta")
         }
         else if(notaFinal > 30 && notaFinal < 40){
