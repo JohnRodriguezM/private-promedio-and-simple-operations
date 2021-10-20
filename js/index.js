@@ -32,7 +32,7 @@ let numeros = [];
         
         contador += numeros[i]
         }
-
+        
         let result = contador / numeros.length;
         alert( "tu promedio es " + result);
         numeros.splice(0)
@@ -53,13 +53,19 @@ let numeros = [];
 
         notaFinal > .5 ? alert("tu nota final es de " + notaFinal) : null
 
-        if(notaFinal < 30 || notaFinal > 3){
+        if(notaFinal < 30 && notaFinal > 5 ){
             alert("no vas pasando la materia, te falta")
         }
-        else if(notaFinal > 30 && notaFinal < 40 || notaFinal > 3 && notaFinal < 4){
+        else if(notaFinal < 3.0 ){
+            alert("perdiste la materia")
+        }
+        else if(notaFinal > 3.0){
+            alert("pasaste la materia")
+        }
+        else if(notaFinal > 30 && notaFinal < 40){
             alert("felicidades, ya aprobaste la materia, pero puedes mejorar, ánimo")
         }
-        else if(notaFinal > 40 || notaFinal > 40){
+        else if(notaFinal > 40){
             alert("felicidades, ya aprobaste la materia, y con una muy buena nota")
         }
         }
