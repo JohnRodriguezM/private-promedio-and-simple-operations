@@ -6,6 +6,7 @@
 form{
     display: grid;
     grid-template-columns: auto auto;
+    justify-content: space-evenly;
     padding-top: 45px;
 }
 .main_form_valores,.main_form_porcentajes{

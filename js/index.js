@@ -17,13 +17,11 @@ let tercerPorcentaje = document.getElementById('porcentaje3');
 let numeros = [];
 
     function operacion (){
+//operaciones para promedio
+       primerValor.value > 1? numeros.push(Number(primerValor.value)): undefined;
+       segundoValor.value > 1? numeros.push(Number(segundoValor.value)) :undefined;
+       tercerValor.value > 1? numeros.push(Number(tercerValor.value)): undefined;
 
-       numeros.push(Number(primerValor.value))
-       
-       numeros.push(Number(segundoValor.value))
-        if(tercerValor.value > 10 && primerValor.value > 10){
-            numeros.push(Number(tercerValor.value))
-        }
         
         let contador = 0;
         
@@ -35,7 +33,7 @@ let numeros = [];
         let result = contador / numeros.length;
         alert( "tu promedio es " + result);
         numeros.splice(0)
-       
+//operaciones para el porcentaje      
             let primerValorPorcentaje = Number((primerValor.value * Number(primerPorcenjate.value) / 100 ))
 
             primerPorcenjate.value < 10?  null : alert("el porcentaje de tu valor uno es de " + primerValorPorcentaje)
@@ -48,8 +46,10 @@ let numeros = [];
 
             tercerPorcentaje.value < 10 ? null :  alert("El porcentaje de tu tercer valor es " + tercerValorPorcentaje)
 
-        let notaFinal = Number(primerValorPorcentaje) + Number(segundoValorPorcentaje) + Number(tercerValorPorcentaje);
 
+//operacion resultanta de porcentaje y promedio 
+        let notaFinal = Number(primerValorPorcentaje) + Number(segundoValorPorcentaje) + Number(tercerValorPorcentaje);
+//condicionales para decidir el alert que se muestra dependiendo la situcacion de la nota
         notaFinal > .5 ? alert("tu nota final es de " + notaFinal) : null
 
         if(notaFinal < 30 && notaFinal > 5){
@@ -88,6 +88,32 @@ let numeros = [];
         }
 
         */
+        let numerosLista = document.getElementById('numerosLista') + "   "
+        function calcularMediana(numerosLista)
 
-
+        {
         
+        
+        if(numerosLista.value.length % 2 === 0)
+        {  
+        
+        let operacionMedianaPar = "la mediana de tu lista es " + ((numerosLista.value.length  / 2 ) + (numerosLista.value.length  / 2) + 1) / 2
+        let parrafoInteraccion = document.getElementById('parrafoMediana').innerHTML = operacionMedianaPar;
+        return parrafoInteraccion;
+        }else{
+        
+        let operacionListaImpar = parseInt(numerosLista.value.length / 2);
+        let mensaje = `la mediana de lista impar es ${numerosLista.value[operacionListaImpar]}`
+        let parrafoInteraccion2 = document.getElementById('parrafoMediana').innerHTML = mensaje;
+        return parrafoInteraccion2;
+
+        /*numerosLista.sort(function(a,b){
+            return a - b 
+            
+            })*/
+
+        }
+        
+        
+        
+        }
