@@ -88,16 +88,22 @@ let numeros = [];
         }
 
         */
-        let numerosLista = document.getElementById('numerosLista') + "   "
-        function calcularMediana(numerosLista)
+        let numerosLista = document.getElementById('numerosLista')
+        
+
+       
+
+
+        
+        function calcularMediana()
 
         {
         
         
         if(numerosLista.value.length % 2 === 0)
-        {  
+        {
         
-        let operacionMedianaPar = "la mediana de tu lista es " + ((numerosLista.value.length  / 2 ) + (numerosLista.value.length  / 2) + 1) / 2
+        let operacionMedianaPar = "la mediana de tu lista es " + (( numerosLista.value.length  / 2 ) + (numerosLista.value.length  / 2) + 1) / 2
         let parrafoInteraccion = document.getElementById('parrafoMediana').innerHTML = operacionMedianaPar;
         return parrafoInteraccion;
         }else{
@@ -108,7 +114,7 @@ let numeros = [];
         return parrafoInteraccion2;
 
         /*numerosLista.sort(function(a,b){
-            return a - b 
+            return a - b
             
             })*/
 
@@ -117,3 +123,89 @@ let numeros = [];
         
         
         }
+
+
+        /*rango medio-*/
+
+        /*funcion rango medio*/
+        function rangoMedio(numeros){
+
+            let minValor = Math.min(...numeros)
+            console.log(minValor)
+            let maxValor = Math.max(...numeros)
+            console.log(maxValor)
+            let result = (minValor + maxValor) / 2;
+            return result;
+            }
+
+
+
+
+            /* analisis salarial*/
+const arrayAlmacenColombia = []
+
+        arrayAlmacenColombia.push(
+            new elemento("john",5000000000,"colombiano"),
+            new elemento("juan",450000,"colombiano"),
+            new elemento("sara",15000,"colombiano"),
+            new elemento("simon",450,"colombiano"),
+            new elemento("pepe",7000,"colombiano"),
+            new elemento("juanca",9000,"colombiano"),
+            new elemento("mafe",12000,"colombiano"),
+            new elemento("pedro",40000,"colombiano"),
+            new elemento("camilo",80000,"colombiano"),
+            new elemento("maria",2000,"colombiano"),
+            new elemento("juanes",9500,"colombiano"),
+            new elemento("francisco",7800,"colombiano"),
+            new elemento("pepe",9750,"colombiano"),
+            new elemento("andra",5000,"colombiano")
+            )
+
+            console.log(arrayAlmacenColombia)
+            console.log(arrayAlmacenColombia[0])
+
+            var filtrador = arrayAlmacenColombia.map(function(montoSalario){
+                let valor = montoSalario.salario;
+                return valor;
+            })
+            const salarioMenor_A_Mayor = filtrador.sort(function(a,b){
+                return a - b;
+            })
+            const salariosMasAltos = arrayAlmacenColombia.filter(function(grandeSalario){
+                let ricos =  grandeSalario.salario > 100000;
+                return ricos;
+            })
+            const nombresDeLosMasMillonarios = salariosMasAltos.map(function(nombres){
+                let z = nombres.nombre;
+                return z;
+            })
+            console.log(filtrador)
+            console.log(salariosMasAltos);
+            console.log(nombresDeLosMasMillonarios)
+
+            /*mediana*/function medianaEnSalarios(filtrador) {
+                if(filtrador.length % 2 === 0){
+                    let poscicion1 = filtrador.length / 2;
+                    let poscicion2 = ((filtrador.length / 2) - 1);
+                    let result = (filtrador[poscicion1] + filtrador[poscicion2]) / 2;
+                    return result;
+                }
+                else{
+                    let medianaImpar = parseInt(filtrador.length / 2)
+                    return "la mediana impar de tu salario es " + filtrador[medianaImpar];
+                }
+            }
+
+            /*media aritmetica*/
+            function mediaAritmetica(filtrador) {
+
+                const sumaConReduce = filtrador.reduce(function(numeroInicial = 0, valorSumado){
+    
+                    let sumadora = numeroInicial + valorSumado;
+                    return sumadora;
+    
+    
+    
+                })
+                return sumaConReduce / filtrador.length;
+            }
