@@ -40,14 +40,23 @@
             <p id = "parrafoMediana"></p>
         </form>
         <form action="">
-            <input type="number" id = "rangoMedioo" oninput = "rangoMedio()" >
-
+            <h3>analisis salarial</h3>
+            <input type="number" id = "rangoMedioo" oninput = "medianaEnSalarios(filtrador)" >
+            <button >
+                <a href="">calcula el promedio</a>
+            </button>
+            <input type="text" name="" id="valores" oninput = "empujerArray()">
+            <input type = "button" onclick = "medianaEnSalarios(filtrador)" value = "Calcula la media de salarios" />
+                
+            <p id="parrafoMediana"></p>
 
 
         </form>
+        
     </main>
-    <script src="./js/elemento.2.js"></script>
     <script src="./js/index.js"></script>
+    
+    
     
 </body>
 </html>

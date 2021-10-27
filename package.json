@@ -1,0 +1,19 @@
+{
+  "name": "taller_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnRodriguezM/promedio.git"
+  },
+  "author": "John Jairo Rodriguez Medina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnRodriguezM/promedio/issues"
+  },
+  "homepage": "https://github.com/JohnRodriguezM/promedio#readme"
+}

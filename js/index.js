@@ -100,7 +100,7 @@ let numeros = [];
         {
         
         
-        if(numerosLista.value.length % 2 === 0)
+        if(numerosLista.value % 2 === 0)
         {
         
         let operacionMedianaPar = "la mediana de tu lista es " + (( numerosLista.value.length  / 2 ) + (numerosLista.value.length  / 2) + 1) / 2
@@ -144,7 +144,15 @@ let numeros = [];
             /* analisis salarial*/
 const arrayAlmacenColombia = []
 
+class elemento {
+    constructor(nombre, salario, nacionalidad) {
+        this.nombre = nombre;
+        this.salario = salario;
+        this.nacionalidad = nacionalidad;
+    }
+}
         arrayAlmacenColombia.push(
+            
             new elemento("john",5000000000,"colombiano"),
             new elemento("juan",450000,"colombiano"),
             new elemento("sara",15000,"colombiano"),
@@ -188,7 +196,9 @@ const arrayAlmacenColombia = []
                     let poscicion1 = filtrador.length / 2;
                     let poscicion2 = ((filtrador.length / 2) - 1);
                     let result = (filtrador[poscicion1] + filtrador[poscicion2]) / 2;
-                    return result;
+                    let z = document.getElementById('parrafoMediana').innerHTML = "la mediana es " + result;
+                    return z;
+
                 }
                 else{
                     let medianaImpar = parseInt(filtrador.length / 2)
@@ -200,12 +210,8 @@ const arrayAlmacenColombia = []
             function mediaAritmetica(filtrador) {
 
                 const sumaConReduce = filtrador.reduce(function(numeroInicial = 0, valorSumado){
-    
                     let sumadora = numeroInicial + valorSumado;
                     return sumadora;
-    
-    
-    
                 })
                 return sumaConReduce / filtrador.length;
             }
